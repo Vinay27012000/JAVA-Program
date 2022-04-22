@@ -1,0 +1,42 @@
+import java.util.*;
+class Parent{
+	int a;
+	Parent(){
+		System.out.println("Parent class default constructor called");
+	}
+	Parent(int a){
+	this.a=a;
+	System.out.println("Parent class parameterised constructorcalled");
+	
+	}
+	void dispParent() {
+		System.out.println("a= "+a);
+	}
+	
+}
+class child extends Parent{
+	int b;
+	child(){
+		System.out.println("Child class constructor called");
+	}
+	child(int a,int b){
+		super(a);
+		System.out.println("Child class parameterised constructor called ");
+		this.b=b;
+	//	super.a=a;
+	}
+	void dispchild() {
+		dispParent();
+		System.out.println("a= "+super.a+"\nb= "+b);
+	}
+}
+public class javaInheritence {
+
+	public static void main(String[] args) {
+	child obj=new child();
+	child  obj2=new child(5,9);
+	obj.dispchild();
+	obj2.dispchild();
+	}
+
+}
