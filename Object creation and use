@@ -1,0 +1,40 @@
+
+package ayush;
+
+import java.util.Scanner;
+
+public class SimpleObject {
+	int a,b;
+	SimpleObject()
+	{
+		a=10;
+		b=20;
+	}
+	SimpleObject(int x,int y)
+	{
+		a=x;
+		b=y;
+	}
+	SimpleObject(SimpleObject s)
+	{
+		this.a=a;
+		this.b=b;
+	}
+	void disp()
+	{
+		System.out.println("a"+ a + "b" + b);
+	}
+	public static void main(String[] args) {
+
+		SimpleObject a1=new SimpleObject();
+		SimpleObject a2=new SimpleObject();
+		SimpleObject a3=new SimpleObject(30,40);
+		SimpleObject a4=a2;
+		SimpleObject a5 =new SimpleObject(a1);
+		SimpleObject a6=new SimpleObject(30,40);
+		a1.disp();
+		a2.disp();
+		a2.a=500;
+		a3.disp();
+	}
+}
