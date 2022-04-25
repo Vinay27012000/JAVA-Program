@@ -1,0 +1,25 @@
+package ayush;
+
+public class Q5 {
+	static int x=5;
+   
+	static {
+		System.out.println("Static Block:");
+	}
+	{
+		System.out.println("Instance Block:");
+	}
+	Q5()
+	{
+		System.out.println("Default Constructor:");
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		new Q5();
+		System.out.println(++x);
+		new Q5();
+	}
+
+}
