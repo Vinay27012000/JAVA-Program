@@ -1,0 +1,45 @@
+class A{
+	int x,y;
+	void show() {
+		System.out.println("parent show");
+	}
+	A(){
+		x=10;y=20;
+	}
+	void showvalue() {
+		System.out.println("x = "+x+"y = "+y);
+	}
+}
+class B extends A{
+	int z;
+	B(){z=30;}
+	void show(String s) {
+		System.out.println("child class "+s);
+	}
+	void showvalue() {
+		System.out.println("z = "+z);
+	}
+	
+}
+
+public class DemoOverriding {
+
+	public static void main(String[] args) {
+		A a1=new A();
+		B b1=new B();
+		A ob;
+		a1.show();
+		a1.showvalue();
+		b1.show("hello");
+		b1.showvalue();
+		b1.show();
+		ob=a1;
+		ob.show();
+		ob.showvalue();
+		ob=b1;
+		ob.show();
+		ob.showvalue();
+		
+	}
+
+}
