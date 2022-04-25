@@ -1,0 +1,49 @@
+class shape{
+shape(){
+	System.out.println("Shape extended");
+}	
+	
+}
+class Circle extends shape{
+void draw() {
+	System.out.println("Circle Drawn");
+	}	
+void erase() {
+	System.out.println("Circle Erased");
+}
+}
+class Square extends shape{
+	void draw() {
+		System.out.println("Square Drawn");
+		
+	}	
+	void erase() {
+		System.out.println("Square Erased");
+	}	
+}
+class Triangle extends shape{
+	void draw() {
+		System.out.println("Triangle Drawn");
+		
+	}	
+	void erase() {
+		System.out.println("Triangle Erased");
+	}
+	
+}
+
+public class DemoShape {
+
+	public static void main(String[] args) {
+		Circle c=new Circle();
+		c.draw();
+		c.erase();
+		Triangle t=new Triangle();
+		t.draw();
+		t.erase();
+		Square s=new Square();
+		s.draw();
+		s.erase();
+	}
+
+}
