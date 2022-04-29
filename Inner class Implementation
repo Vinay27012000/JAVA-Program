@@ -1,0 +1,45 @@
+class Outer{
+	int Outer_x;
+	Inner i1;
+	Outer(){
+	System.out.println("Outer class constructor called");
+	Outer_x=10;
+	i1=new Inner();
+	}
+	Outer(int p,int q){
+		Outer_x=p;
+		i1=new Inner(q);
+	}
+	
+	void show() {
+		i1.disp();
+		System.out.println(i1.inner_y);
+	}
+	class Inner{
+		int inner_y;
+		Inner(){                                           
+			inner_y=20;
+			System.out.println("Inner class Constructor called");
+		}
+		Inner(int p){
+			inner_y=p;
+		}
+		void disp() {
+			System.out.println("Outer_x = "+Outer_x+"Inner_y = "+inner_y);
+		}
+	}
+	
+}
+
+public class DemoInner {
+
+	public static void main(String[] args) {
+Outer o1=new Outer();
+Outer o2=new Outer(1,2);
+System.out.println("object 1");
+o1.show();
+System.out.println("object 2");
+o2.show();
+}
+
+}
