@@ -1,0 +1,44 @@
+interface i{
+final float pi=3.14f;
+void math1();
+void math2(int x);
+
+}
+class Parent{
+	int x,y;
+	Parent(){
+		x=10;y=20;
+	}
+	void dispParent() {
+		System.out.println("x= "+x+" y= "+y);
+	}
+	
+}
+class child extends Parent implements i {
+	int z;
+	child(){
+		super();
+		z=30;
+	}
+	void dispchild() {
+		super.dispParent();
+		System.out.println(" z = "+z);
+	}
+	public void math1() {
+	System.out.println("math1 implements");
+	}
+	public void math2(int x) {
+	System.out.println("math2 implements and x= "+x);
+	}
+}
+public class DemoInterface {
+
+	public static void main(String[] args) {
+		child c1=new child();
+		c1.dispchild();
+	c1.math1();
+	c1.math2(10);
+
+	}
+
+}
